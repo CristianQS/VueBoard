@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <h1>My Event</h1>
-    <p>Capacity: {{ capacity }}</p>
-    <button id="ba" @click="increaseCapacity()">Increase Capacity</button>
+  <div class="container mx-auto pt-8">
+    <router-view />
   </div>
 </template>
 
 <script lang="ts">
-import { createComponent, ref} from '@vue/composition-api'
+import { createComponent, ref } from '@vue/composition-api'
+import { Component, Vue } from 'vue-property-decorator';
 import { Observable, fromEvent, of } from 'rxjs';
 import { take } from 'rxjs/operators';
-
 
 export default createComponent({
   setup() {
